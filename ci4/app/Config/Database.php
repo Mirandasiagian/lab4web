@@ -2,6 +2,7 @@
 
 namespace Config;
 
+use CodeIgniter\Commands\Utilities\Environment;
 use CodeIgniter\Database\Config;
 
 /**
@@ -27,21 +28,21 @@ class Database extends Config
     public array $default = [
         'DSN'          => '',
         'hostname'     => 'localhost',
-        'username'     => '',
+        'username'     => 'root',
         'password'     => '',
-        'database'     => '',
+        'database'     => 'lab7web',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
-        'DBDebug'      => true,
+        'DBDebug'      => (ENVIRONMENT !== 'production'),
         'charset'      => 'utf8mb4',
         'DBCollat'     => 'utf8mb4_general_ci',
         'swapPre'      => '',
         'encrypt'      => false,
         'compress'     => false,
-        'strictOn'     => false,
+        'strictOn'     => true,
         'failover'     => [],
-        'port'         => 3306,
+        'port'         => 3307,
         'numberNative' => false,
         'foundRows'    => false,
         'dateFormat'   => [
@@ -164,8 +165,8 @@ class Database extends Config
      */
     public array $tests = [
         'DSN'         => '',
-        'hostname'    => '127.0.0.1',
-        'username'    => '',
+        'hostname'    => 'localhost',
+        'username'    => 'root',
         'password'    => '',
         'database'    => ':memory:',
         'DBDriver'    => 'SQLite3',
@@ -179,7 +180,7 @@ class Database extends Config
         'compress'    => false,
         'strictOn'    => false,
         'failover'    => [],
-        'port'        => 3306,
+        'port'        => 3307,
         'foreignKeys' => true,
         'busyTimeout' => 1000,
         'dateFormat'  => [

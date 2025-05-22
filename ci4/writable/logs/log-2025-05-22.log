@@ -1,0 +1,107 @@
+ERROR - 2025-05-22 12:22:02 --> mysqli_sql_exception: Table 'userlogin.user' doesn't exist in C:\xampp\htdocs\lab7web\ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\lab7web\ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\lab7web\ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\lab7web\ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\lab7web\ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\lab7web\ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\lab7web\ci4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\lab7web\ci4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\lab7web\ci4\app\Database\Seeds\UserSeeder.php(15): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\lab7web\ci4\system\Database\Seeder.php(147): App\Database\Seeds\UserSeeder->run()
+#9 C:\xampp\htdocs\lab7web\ci4\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#10 C:\xampp\htdocs\lab7web\ci4\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#11 C:\xampp\htdocs\lab7web\ci4\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#12 C:\xampp\htdocs\lab7web\ci4\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#13 C:\xampp\htdocs\lab7web\ci4\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#14 C:\xampp\htdocs\lab7web\ci4\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#15 {main}
+ERROR - 2025-05-22 23:25:27 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\lab7web\ci4\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 C:\xampp\htdocs\lab7web\ci4\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', '1234', 'userlogin', 3307, '', 0)
+#1 C:\xampp\htdocs\lab7web\ci4\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\lab7web\ci4\system\Database\Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\lab7web\ci4\system\Database\Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#4 C:\xampp\htdocs\lab7web\ci4\system\Database\Seeder.php(98): CodeIgniter\Database\Config::forge(NULL)
+#5 C:\xampp\htdocs\lab7web\ci4\system\Commands\Database\Seed.php(71): CodeIgniter\Database\Seeder->__construct(Object(Config\Database))
+#6 C:\xampp\htdocs\lab7web\ci4\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#7 C:\xampp\htdocs\lab7web\ci4\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#8 C:\xampp\htdocs\lab7web\ci4\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#9 C:\xampp\htdocs\lab7web\ci4\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#10 C:\xampp\htdocs\lab7web\ci4\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\lab7web\ci4\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\lab7web\ci4\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\lab7web\ci4\system\Database\Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\lab7web\ci4\system\Database\Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+#3 C:\xampp\htdocs\lab7web\ci4\system\Database\Seeder.php(98): CodeIgniter\Database\Config::forge(NULL)
+#4 C:\xampp\htdocs\lab7web\ci4\system\Commands\Database\Seed.php(71): CodeIgniter\Database\Seeder->__construct(Object(Config\Database))
+#5 C:\xampp\htdocs\lab7web\ci4\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#6 C:\xampp\htdocs\lab7web\ci4\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#7 C:\xampp\htdocs\lab7web\ci4\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#8 C:\xampp\htdocs\lab7web\ci4\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#9 C:\xampp\htdocs\lab7web\ci4\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2025-05-22 23:25:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: CLI, Route: db:seed/UserSeeder]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\Database.php(72): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\Config.php(111): CodeIgniter\Database\Database->loadForge(Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\Database\Seeder.php(98): CodeIgniter\Database\Config::forge(null)
+ 4 SYSTEMPATH\Commands\Database\Seed.php(71): CodeIgniter\Database\Seeder->__construct(Object(Config\Database))
+ 5 SYSTEMPATH\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run([...])
+ 6 SYSTEMPATH\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', [...])
+ 7 SYSTEMPATH\Boot.php(360): CodeIgniter\CLI\Console->run()
+ 8 SYSTEMPATH\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+ 9 ROOTPATH\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2025-05-22 23:39:26 --> mysqli_sql_exception: Table 'lab7web.users' doesn't exist in C:\xampp\htdocs\lab7web\ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\lab7web\ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\lab7web\ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\lab7web\ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\lab7web\ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\lab7web\ci4\app\Database\Seeds\UserSeeder.php(16): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\lab7web\ci4\system\Database\Seeder.php(147): App\Database\Seeds\UserSeeder->run()
+#6 C:\xampp\htdocs\lab7web\ci4\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#7 C:\xampp\htdocs\lab7web\ci4\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#8 C:\xampp\htdocs\lab7web\ci4\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#9 C:\xampp\htdocs\lab7web\ci4\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#10 C:\xampp\htdocs\lab7web\ci4\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 C:\xampp\htdocs\lab7web\ci4\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-05-22 23:42:50 --> mysqli_sql_exception: Table 'lab7web.users' doesn't exist in C:\xampp\htdocs\lab7web\ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\lab7web\ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\lab7web\ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\lab7web\ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\lab7web\ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\lab7web\ci4\app\Database\Seeds\UserSeeder.php(16): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\lab7web\ci4\system\Database\Seeder.php(147): App\Database\Seeds\UserSeeder->run()
+#6 C:\xampp\htdocs\lab7web\ci4\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#7 C:\xampp\htdocs\lab7web\ci4\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#8 C:\xampp\htdocs\lab7web\ci4\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#9 C:\xampp\htdocs\lab7web\ci4\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#10 C:\xampp\htdocs\lab7web\ci4\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 C:\xampp\htdocs\lab7web\ci4\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-05-22 23:42:50 --> mysqli_sql_exception: Table 'lab7web.user' doesn't exist in C:\xampp\htdocs\lab7web\ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\lab7web\ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\lab7web\ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\lab7web\ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\lab7web\ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\lab7web\ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\lab7web\ci4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\lab7web\ci4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\lab7web\ci4\app\Database\Seeds\UserSeeder.php(22): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\lab7web\ci4\system\Database\Seeder.php(147): App\Database\Seeds\UserSeeder->run()
+#9 C:\xampp\htdocs\lab7web\ci4\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#10 C:\xampp\htdocs\lab7web\ci4\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#11 C:\xampp\htdocs\lab7web\ci4\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#12 C:\xampp\htdocs\lab7web\ci4\system\Boot.php(360): CodeIgniter\CLI\Console->run()
+#13 C:\xampp\htdocs\lab7web\ci4\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#14 C:\xampp\htdocs\lab7web\ci4\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#15 {main}
