@@ -10,5 +10,5 @@ $routes->get('/about', 'Page::about');
 $routes->get('/contact', 'Page::contact');
 $routes->get('/faqs', 'Page::faqs');
 $routes->get('/tos', 'Page::tos' );
-$routes->get('/user/login', 'User::login');
+$routes->match(['get', 'post'], 'user/login', 'User::login');
 $routes->setAutoRoute(true);
