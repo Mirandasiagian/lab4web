@@ -20,12 +20,12 @@
 
             <div class="mb-3">
                 <label for="InputForEmail" class="form-label">Email address</label>
-                <input type="email" name="email" class="form-control" id="InputForEmail" value="<?= set_value('email') ?>">
+                <input type="email" name="email" class="form-control" id="InputForEmail" value="<?= set_value('email') ?>" required>
             </div>
 
             <div class="mb-3">
                 <label for="InputForPassword" class="form-label">Password</label>
-                <input type="password" name="password" class="form-control" id="InputForPassword">
+                <input type="password" name="password" class="form-control" id="InputForPassword" required>
             </div>
 
             <button type="submit" class="btn btn-primary">Login</button>
