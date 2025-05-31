@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Layout Sederhana</title>
+<title>Portal Berita</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
 </body>
 </html>
 <header>
-    <h1>Layout Sederhana</h1>
+    <h1>Portal Berita</h1>
     </header>
     <nav>
     <a href="home.html" class="active">Home</a>
